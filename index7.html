@@ -1,336 +1,155 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Slick Playground</title>
-  <meta charset="UTF-8">
-  <link rel="stylesheet" type="text/css" href="slick/slick.css">
-  <link rel="stylesheet" type="text/css" href="slick/slick-theme.css">
-   <link rel="stylesheet" type="text/css" href="  https://www.amnesty.org/cdn/styles/main.css">
-  
-   
-    <!--  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
-   <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    
-    
-   
 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-
-  <style type="text/css">
-	  
-	  
-	 @font-face{
-  font-family:"AmnestyTradeGothicW04BdCnNo-20";
-  src:url("fonts/AmnestyTradeGothicW04BdCnNo-20.eot?#iefix");
-  src:url("fonts/AmnestyTradeGothicW04BdCnNo-20.eot?#iefix") format("eot"),url("fonts/AmnestyTradeGothicW04BdCnNo-20.woff") format("woff"),url("fonts/AmnestyTradeGothicW04BdCnNo-20.ttf") format("truetype"),url("fonts/AmnestyTradeGothicW04BdCnNo-20.svg#AmnestyTradeGothicW04BdCnNo-20") format("svg");
-}
-	  
-	  
-	  
-	  
-    html, body {
-      margin: 0;
-      padding: 0;
-		font-family: fonts;
-		
-    }
-	  
-	 
-
-    * {
-      box-sizing: border-box;
-    }
-
-    .slider {
-        width: 80%;
-        margin: 100px auto;
-		margin-top:0px;
-    }
-
-    .slick-slide {
-      margin: 0px 0px;
-    }
-
-    .slick-slide img {
-      width: 100%;
-    }
-
-    .slick-prev:before,
-    .slick-next:before {
-      color: black;
-    }
-
-
-    .slick-slide {
-      transition: all ease-in-out .3s;
-      opacity: 1;
-    }
-    
-    .slick-active {
-      opacity: .65;
-    }
-
-    .slick-current {
-      opacity: 1;
-    }
-	  
-	  /* Must include Font Awesome (here: https://fortawesome.github.io/Font-Awesome/get-started/) for icons to show up */
-
-.slick-prev,
-.slick-next {
-    font-size: 0;
-    position: absolute;
-    top: 30px;
-    color: #d5122f;
-    border: 0;
-    background: none;
-    z-index: 1;
-	height:inherit;
-}
-
-.slick-prev {
-    left: -75px;
-}
-
- .slick-prev:after {
-	  content: "\f104";
-    font: 40px/1 'FontAwesome';
-} 
-
-.slick-next {
-    right: -45px;
-    text-align: right;
-}
-
-.slick-next:after {
-	   content: "\f105";
-     font: 40px/1 'FontAwesome';
-}  
-
-.slick-prev:hover:after,
-.slick-next:hover:after {
-    color: #7e7e7e;
-}
-	  
-	  .tablet {
-		  display:block;
-	  }
-	  
-	   .mobile {
-		  display:none;
-	  }
-	  
-	  
-	  
-	  
-	  
-	  
-	  @media only screen and (max-width: 600px) {
-		  
 		 
-		  
-		  .mobile {
-			  display:block;
-		  }
-		  
-		  .tablet {
-			  display:none;
-		  }
-		  
-		  .slick-prev {
-    left: -40px;
-}
-
-.slick-next {
-    right: -15px;
-
-}
-		  
-	  }
-	  
-	 
-
-	  
-	  /* .org style start */
-
-	  .slick-prev:after  {
-    background-image: url(https://www.amnesty.org/cdn/images/sprite.svg);
-    background-image: url(https://www.amnesty.org/cdn/images/sprite.svg),none;
-    background-repeat: no-repeat;
-    background-size: 22.357142857142858em 20.428571428571427em;
-    content: ' ';
-    display: inline-block;
-    background-position: -7.85714em -18.92857em;
-    height: 1.14286em;
-    width: 1.14286em;
-	  }
-		  
-	.slick-next:after {
-    background-image: url(https://www.amnesty.org/cdn/images/sprite.svg);
-    background-image: url(https://www.amnesty.org/cdn/images/sprite.svg),none;
-    background-repeat: no-repeat;
-    background-size: 22.357142857142858em 20.428571428571427em;
-    content: ' ';
-    display: inline-block;
-        background-position: -1.85714em -18.92857em;
-    height: 1.14286em;
-    width: 1.14286em;
-}
-	  
-
-	  .slick-next:before { 
-		  display:none;
-	  }
-	  
-	  
-	  	  .slick-prev:before { 
-		  display:none;
-	  }
-
-.pagination__link {
-    line-height: 1.2em;
-	text-align: center;
-	margin:0;
-	font-family:  AmnestyTradeGothicW04BdCnNo-20;
-	font-size:1.2em;
-
-	
-}
-	  
-	  .slick-current {
-		  background:#000;
-		  
-	  }
-	  
-	  .slick-active {
-    opacity: 1;
-}
-	  
-	  
-	  .slick-current .pagination__link {
-		  color:white;  
-	  }
-	  
-	  .pagination__link:hover {
-	background: #ddd;
-	  }
-        
-	 .slick-current .pagination__link:hover {
-    background: #222;
-}
-	  
-  </style>
-  
-  <base target="_parent">
-  
-
-  
-</head>
-<body>
-
- 
-  
-  
-         <section class="tablet slider">
-    <div>
-      <a class="pagination__link" href="https://www.amnesty.org/en/latest/research/2018/03/online-violence-against-women-chapter-1#topanchor" data-pagination-page="1">Chapter 1 - A Toxic Place for Women</a>
-    </div>
-    <div>
-        <a class="pagination__link" href="https://www.amnesty.org/en/latest/research/2018/03/online-violence-against-women-chapter-2#topanchor" data-pagination-page="2">Chapter 2 - Triggers of Violence and Abuse Against Women on Twitter</a>
-    </div>
-    <div>
-	<a class="pagination__link" href="https://www.amnesty.org/en/latest/research/2018/03/online-violence-against-women-chapter-3#topanchor" data-pagination-page="3">Chapter 3 - Women’s Experiences of Violence and Abuse on Twitter</a>
-    </div>
-    <div>
-     <a class="pagination__link" href="https://www.amnesty.org/en/latest/research/2018/03/online-violence-against-women-chapter-4#topanchor" data-pagination-page="4">Chapter 4 - The Reporting Process</a>
-    </div>
-    <div>
-     <a class="pagination__link" href="https://www.amnesty.org/en/latest/research/2018/03/online-violence-against-women-chapter-5#topanchor" data-pagination-page="6">Chapter 5 - The Silencing Effect</a>
-    </div>
-    <div>
-      <a class="pagination__link" href="https://www.amnesty.org/en/latest/research/2018/03/online-violence-against-women-chapter-6#topanchor" data-pagination-page="6">Chapter 6 - The Psychological Harms of Violence and Abuse Against Women Online</a>
-    </div>
-     <div>
-       <a class="pagination__link" href="https://www.amnesty.org/en/latest/research/2018/03/online-violence-against-women-chapter-7#topanchor" data-pagination-page="7">Chapter 7 - Human Rights Responsibilities</a>
-    </div>
-      <div>
-       <a class="pagination__link" href="https://www.amnesty.org/en/latest/research/2018/03/online-violence-against-women-chapter-8#topanchor" data-pagination-page="8">Chapter 8 - The Solutions</a>
-    </div>
-  </section>
-
-
-  
-  
-    <section class="mobile slider">
-    <div>
-      <a class="pagination__link" href="https://www.amnesty.org/en/latest/research/2018/03/online-violence-against-women-chapter-1#topanchor" data-pagination-page="1">Chapter 1 - A Toxic Place for Women</a>
-    </div>
-    <div>
-        <a class="pagination__link" href="https://www.amnesty.org/en/latest/research/2018/03/online-violence-against-women-chapter-2#topanchor" data-pagination-page="2">Chapter 2 - Triggers of Violence and Abuse Against Women on Twitter</a>
-    </div>
-    <div>
-	<a class="pagination__link" href="https://www.amnesty.org/en/latest/research/2018/03/online-violence-against-women-chapter-3#topanchor" data-pagination-page="3">Chapter 3 - Women’s Experiences of Violence and Abuse on Twitter</a>
-    </div>
-    <div>
-     <a class="pagination__link" href="https://www.amnesty.org/en/latest/research/2018/03/online-violence-against-women-chapter-4#topanchor" data-pagination-page="4">Chapter 4 - The Reporting Process</a>
-    </div>
-    <div>
-     <a class="pagination__link" href="https://www.amnesty.org/en/latest/research/2018/03/online-violence-against-women-chapter-5#topanchor" data-pagination-page="6">Chapter 5 - The Silencing Effect</a>
-    </div>
-    <div>
-      <a class="pagination__link" href="https://www.amnesty.org/en/latest/research/2018/03/online-violence-against-women-chapter-6#topanchor" data-pagination-page="6">Chapter 6 - The Psychological Harms of Violence and Abuse Against Women Online</a>
-    </div>
-     <div>
-       <a class="pagination__link" href="https://www.amnesty.org/en/latest/research/2018/03/online-violence-against-women-chapter-7#topanchor" data-pagination-page="7">Chapter 7 - Human Rights Responsibilities</a>
-    </div>
-      <div>
-       <a class="pagination__link" href="https://www.amnesty.org/en/latest/research/2018/03/online-violence-against-women-chapter-8#topanchor" data-pagination-page="8">Chapter 8 - The Solutions</a>
-    </div>
-  </section>
-
-
-  <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-  <script src="slick/slick.js" type="text/javascript" charset="utf-8"></script>
-  <script type="text/javascript">
-    $(document).on('ready', function() {
-    
-  
-      
-		
-		 $(".tablet").slick({
-        dots: false,
-        infinite: false,
-        slidesToShow: 2,
-        slidesToScroll: 1,	
-		initialSlide: 7,
+		 	 	 <script>
 			 
-      });
-		
-		$(".mobile").slick({
-        dots: false,
-        infinite: false,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-		initialSlide: 7,
-			
-});
-    
+$(document).ready(function(){
+    $(".button1").click(function(){
+ $(".text1").toggle(150);
     });
-	  
-	  
-	  
+});
+
 	
+$(document).ready(function(){
+    $(".button2").click(function(){
+ $(".text2").toggle(150);
+    });
+});
 
-	  
+		
+$(document).ready(function(){
+    $(".button3").click(function(){
+ $(".text3").toggle(150);
+    });
+});
+			 
+			 $(document).ready(function(){
+    $(".button4").click(function(){
+ $(".text4").toggle(150);
+    });
+});
 
-
-
-
-
-	  
 	
+$(document).ready(function(){
+    $(".button5").click(function(){
+ $(".text5").toggle(150);
+    });
+});
+
+
+			 
 </script>
 
-</body>
-</html>
+<style>
+
+.button1, .button2, .button3, .button4, .button5 {
+cursor: pointer;
+margin-bottom: 24px;
+    margin-bottom: 1.71429rem;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: TradeGothicLT-BoldCondTwenty,HelveticaNeue-CondensedBold,"Franklin Gothic Medium",sans-serif;
+    -webkit-font-feature-settings: 'kern';
+    font-feature-settings: 'kern';
+    -webkit-font-kerning: normal;
+    font-kerning: normal;
+    line-height: 1.1;
+    -webkit-appearance: none;
+    border-radius: 0;
+    cursor: pointer;
+    display: inline-block;
+    outline: 0;
+    padding: 10px 17.999px;
+    padding: .71429rem 1.28571rem;
+    text-decoration: none;
+    -webkit-transition: background-color .25s,border-color .25s,color .25s;
+    transition: background-color .25s,border-color .25s,color .25s;
+    white-space: nowrap;
+    background-color: #fff;
+    border: 1px solid #000;
+    font-size: 16.001px;
+    font-size: 1.143rem;
+    padding: 14px 24px;
+    padding: 1rem 1.71429rem;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    text-align: center;
+    width: 100%;
+
+}
+
+.text1, .text2, .text3, .text4, .text5 {
+display:none;
+}
+</style>
+
+
+
+<div class="button1">OPEN UP TO HUMAN RIGHTS MONITORS</div>
+<div class="text1">
+<ul>
+<li>Ratify key human rights treaties: the International Covenant on Civil and Political Rights and the International Covenant on Economic, Social and Cultural Rights.</li>
+<br />
+<li>Allow Amnesty International to visit Cuba and other independent human rights monitors, like experts from the United Nations.</li>
+</ul>
+<img style="width:100%;" src="https://aineupstrmedia.blob.core.windows.net/media/17932/amnistia-web2_open-up-to-human-rights-monitors.png?width=500&amp;height=212.9251700680272" alt="" rel="54693" data-id="54693" />
+</div>
+
+
+<div class="button2">EMBRACE DIALOGUE WITH ALL SECTORS OF CUBAN SOCIETY</div>
+<div class="text2">
+
+<ul>
+<li>Promote a meaningful participation of all sectors of civil society in the design of public policies and laws, including human rights defenders and independent trade unions.</li>
+<br />
+<li>Allow the registration of associations through a regime of simple notification.</li>
+<br />
+<li>Open consultations on reforms that guarantee the exercise of free media.</li>
+<br />
+<li>Establish a mechanism for every citizen to access public information held by the government.</li>
+<br />
+<li>Prohibit discrimination in employment based on political or other opinion.</li>
+</ul>
+</div>
+
+
+<div class="button3">GUARANTEE THE RIGHT TO EDUCATION</div>
+<div class="text3">
+
+<ul>
+<li>Ensure that no one is prevented to access education, in particular because of their political opinions.</li>
+<br />
+<li>Guarantee universal access to uncensored Internet</li>
+</ul>
+</div>
+
+
+<div class="button4">PROMOTE EQUALITY AND PREVENT DISCRIMINATION</div>
+<div class="text4">
+
+<ul>
+<li>Continue anti-bullying campaigns in schools to guarantee LGBTI youth access to education free from discrimination.</li>
+<br />
+<li>Become the first independent nation in the Caribbean to legalize same-sex unions.</li>
+<br />
+<li>Develop comprehensive anti-discrimination legislation in consultation with civil society.</li>
+</ul>
+</div>
+
+<div class="button5">STRENGTHEN THE INDEPENDENCE OF THE JUDICIARY AND REFORM CRIMINAL LAWS</div>
+<div class="text5">
+
+<ul>
+<li>Protect lawyers from intimidation and harassment in the exercise of their professional duties.</li>
+<br />
+<li>Reform the criminal law to remove provisions inconsistent with international law such as those on “dangerousness”.</li>
+<br />
+<li>Abolish the death penalty for all crimes.</li>
+</ul>
+</div>
+
+
+
+
+
